@@ -27495,6 +27495,201 @@ font-family: Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif;
     color: black;
     font-weight: 400;
  }
- .wanted-in{
+ /* Marshal start */
+ .boss-section {
+   padding: 0;
+ }
 
+ .boss-shell {
+   /* max-width: 1200px; */
+   margin: 5rem auto;
+   box-shadow: 0 30px 60px -30px rgba(20, 27, 23, 0.35);
+ }
+
+ .boss-row {
+   --bs-gutter-x: 0;
+ }
+
+ /* ---- left: dark panel with framed portrait ---- */
+ .boss-panel-dark {
+   background: var(--pine);
+   background-image:
+     radial-gradient(circle at 85% 12%, rgba(211, 183, 105, 0.10), transparent 45%),
+     linear-gradient(180deg, var(--pine), var(--ink));
+   padding: 4.5rem 3.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   min-height: 620px;
+   position: relative;
+ }
+
+ .boss-eyebrow {
+   font-family: 'Fraunces', serif;
+   font-style: italic;
+   font-weight: 340;
+   font-size: 1.05rem;
+   color: var(--brass-lt);
+   margin-bottom: 2rem;
+ }
+
+ .boss-frame {
+   position: relative;
+   max-width: 360px;
+ }
+
+ .boss-frame::before {
+   content: "";
+   position: absolute;
+   top: -14px;
+   right: -14px;
+   width: 100%;
+   height: 100%;
+   border: 1px solid var(--brass);
+   z-index: 0;
+ }
+
+ .boss-frame img {
+   position: relative;
+   z-index: 1;
+   width: 100%;
+   height: auto;
+   display: block;
+   filter: grayscale(14%) contrast(1.03);
+   border: 1px solid rgba(211, 183, 105, 0.35);
+ }
+
+ .boss-panel-caption {
+   margin-top: 1.6rem;
+   font-size: 0.8rem;
+   color: var(--muted);
+   letter-spacing: 0.02em;
+   max-width: 320px;
+ }
+
+ /* ---- right: parchment panel with content ---- */
+ .boss-panel-light {
+   background: var(--parchment);
+   padding: 4.5rem 3.75rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   min-height: 620px;
+ }
+
+ .boss-role {
+   font-size: 0.78rem;
+   letter-spacing: 0.04em;
+   color: var(--brass);
+   font-weight: 600;
+   margin-bottom: 1.1rem;
+ }
+
+ .boss-name {
+   font-family: 'Fraunces', serif;
+   line-height: 0.98;
+   margin-bottom: 1.7rem;
+ }
+
+ .boss-name .first {
+   display: block;
+   font-weight: 340;
+   font-size: clamp(2.2rem, 4vw, 3.1rem);
+   color: var(--ink);
+ }
+
+ .boss-name .last {
+   display: block;
+   font-weight: 600;
+   font-size: clamp(2.6rem, 5vw, 4.1rem);
+   color: var(--ink);
+ }
+
+ .boss-quote {
+   font-family: 'Fraunces', serif;
+   font-style: italic;
+   font-weight: 340;
+   font-size: 1.22rem;
+   line-height: 1.6;
+   color: #3b4239;
+   max-width: 38ch;
+   margin-bottom: 2.3rem;
+   padding-left: 1.2rem;
+   border-left: 2px solid var(--brass);
+ }
+
+ .boss-stats {
+   display: flex;
+   gap: 2.5rem;
+   padding: 1.6rem 0;
+   margin-bottom: 2.1rem;
+   border-top: 1px solid var(--line);
+   border-bottom: 1px solid var(--line);
+ }
+
+ .boss-stat-value {
+   font-family: 'Fraunces', serif;
+   font-weight: 600;
+   font-size: 1.7rem;
+   color: var(--ink);
+   line-height: 1;
+   margin-bottom: 0.3rem;
+ }
+
+ .boss-stat-label {
+   font-size: 0.72rem;
+   color: var(--muted);
+   letter-spacing: 0.02em;
+ }
+
+ .boss-contact-label {
+   font-size: 0.72rem;
+   letter-spacing: 0.04em;
+   color: var(--muted);
+   display: block;
+   margin-bottom: 0.3rem;
+ }
+
+ .boss-contact-value {
+   font-size: 1.15rem;
+   font-weight: 500;
+   color: var(--ink);
+ }
+
+ .boss-contact-value a {
+   color: inherit;
+   text-decoration: none;
+   background-image: linear-gradient(var(--brass), var(--brass));
+   background-repeat: no-repeat;
+   background-position: 0 100%;
+   background-size: 100% 1px;
+   padding-bottom: 3px;
+   transition: background-size .18s ease;
+ }
+
+ .boss-contact-value a:hover {
+   background-size: 100% 2px;
+ }
+
+ @media (max-width: 991.98px) {
+   .boss-shell {
+     margin: 3rem 1rem;
+   }
+
+   .boss-panel-dark,
+   .boss-panel-light {
+     min-height: auto;
+     padding: 3rem 2rem;
+   }
+
+   .boss-frame {
+     max-width: 280px;
+     margin: 0 auto;
+   }
+
+   .boss-panel-caption {
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+   }
  }
